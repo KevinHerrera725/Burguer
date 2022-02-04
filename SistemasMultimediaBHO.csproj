@@ -1,0 +1,468 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{AC086784-4729-42AC-BBEB-81A929A8C6E1}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SistemasMultimediaBHO</RootNamespace>
+    <AssemblyName>SistemasMultimediaBHO</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <Use64BitIISExpress />
+    <IISExpressSSLPort>44327</IISExpressSSLPort>
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="BouncyCastle.Crypto, Version=1.8.6.0, Culture=neutral, PublicKeyToken=0e99375e54769942">
+      <HintPath>packages\BouncyCastle.1.8.6.1\lib\BouncyCastle.Crypto.dll</HintPath>
+    </Reference>
+    <Reference Include="itextsharp, Version=5.5.13.2, Culture=neutral, PublicKeyToken=8354ae6d2174ddca, processorArchitecture=MSIL">
+      <HintPath>packages\iTextSharp.5.5.13.2\lib\itextsharp.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DataVisualization" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=5.2.7.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Mvc.5.2.7\lib\net45\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Optimization">
+      <HintPath>packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.Razor.3.2.7\lib\net45\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=3.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>packages\Microsoft.AspNet.WebPages.3.2.7\lib\net45\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease">
+      <Private>True</Private>
+      <HintPath>packages\WebGrease.1.6.0\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="Antlr3.Runtime">
+      <Private>True</Private>
+      <HintPath>packages\Antlr.3.5.0.2\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>packages\Newtonsoft.Json.12.0.2\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Client.5.2.7\lib\net45\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http">
+      <HintPath>packages\Microsoft.AspNet.WebApi.Core.5.2.7\lib\net45\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost">
+      <HintPath>packages\Microsoft.AspNet.WebApi.WebHost.5.2.7\lib\net45\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform">
+      <HintPath>packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="Controllers\ClaseEstadistico.cs" />
+    <Compile Include="Controllers\Conexiongrafico.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="vistas\BurguerHappyOficial.aspx.cs">
+      <DependentUpon>BurguerHappyOficial.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\BurguerHappyOficial.aspx.designer.cs">
+      <DependentUpon>BurguerHappyOficial.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\Inicio.aspx.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\Inicio.aspx.designer.cs">
+      <DependentUpon>Inicio.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\Menu.aspx.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\Menu.aspx.designer.cs">
+      <DependentUpon>Menu.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ReportesEstadisticos.aspx.cs">
+      <DependentUpon>ReportesEstadisticos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\ReportesEstadisticos.aspx.designer.cs">
+      <DependentUpon>ReportesEstadisticos.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ReportesEstadisticosBDcuatro.aspx.cs">
+      <DependentUpon>ReportesEstadisticosBDcuatro.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\ReportesEstadisticosBDcuatro.aspx.designer.cs">
+      <DependentUpon>ReportesEstadisticosBDcuatro.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ReportesEstadisticosCBD.aspx.cs">
+      <DependentUpon>ReportesEstadisticosCBD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\ReportesEstadisticosCBD.aspx.designer.cs">
+      <DependentUpon>ReportesEstadisticosCBD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ReportesEstadisticosCBD_tres.aspx.cs">
+      <DependentUpon>ReportesEstadisticosCBD_tres.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\ReportesEstadisticosCBD_tres.aspx.designer.cs">
+      <DependentUpon>ReportesEstadisticosCBD_tres.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ReportesEstadisticosSBD.aspx.cs">
+      <DependentUpon>ReportesEstadisticosSBD.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\ReportesEstadisticosSBD.aspx.designer.cs">
+      <DependentUpon>ReportesEstadisticosSBD.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ReportesEstadisticosSBD_tres.aspx.cs">
+      <DependentUpon>ReportesEstadisticosSBD_tres.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\ReportesEstadisticosSBD_tres.aspx.designer.cs">
+      <DependentUpon>ReportesEstadisticosSBD_tres.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="vistas\ReportesEstadisticos_dos.aspx.cs">
+      <DependentUpon>ReportesEstadisticos_dos.aspx</DependentUpon>
+      <SubType>ASPXCodeBehind</SubType>
+    </Compile>
+    <Compile Include="vistas\ReportesEstadisticos_dos.aspx.designer.cs">
+      <DependentUpon>ReportesEstadisticos_dos.aspx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\bootstrap-theme.css" />
+    <Content Include="Content\bootstrap-theme.min.css" />
+    <Content Include="Content\bootstrap.css" />
+    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="fonts\icomoon.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Content\Site.css" />
+    <Content Include="Java\js\main.js" />
+    <Content Include="Scripts\bootstrap.js" />
+    <Content Include="Scripts\bootstrap.min.js" />
+    <Content Include="fonts\Pacifico-Regular.ttf" />
+    <Content Include="fonts\icomoon.eot" />
+    <Content Include="fonts\icomoon.ttf" />
+    <Content Include="fonts\icomoon.woff" />
+    <None Include="Scripts\jquery-3.4.1.intellisense.js" />
+    <Content Include="Scripts\jquery-3.4.1.js" />
+    <Content Include="Scripts\jquery-3.4.1.min.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.js" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.js" />
+    <None Include="Scripts\jquery.validate-vsdoc.js" />
+    <Content Include="Scripts\jquery.validate.js" />
+    <Content Include="Scripts\jquery.validate.min.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.js" />
+    <Content Include="Scripts\jquery.validate.unobtrusive.min.js" />
+    <Content Include="Scripts\main.js" />
+    <Content Include="Scripts\modernizr-2.8.3.js" />
+    <Content Include="vistas\BurguerHappyOficial.aspx">
+      <BrowseToURL>~\vistas\BurguerHappyOficial.aspx</BrowseToURL>
+    </Content>
+    <Content Include="vistas\css\barralateral.css" />
+    <Content Include="vistas\css\bbbb.css" />
+    <Content Include="vistas\css\estilosmenupapa.css" />
+    <Content Include="vistas\css\estilosreportes.css" />
+    <Content Include="vistas\css\fuente.css" />
+    <Content Include="vistas\css\inicioestilos.css" />
+    <Content Include="vistas\css\liena.css" />
+    <Content Include="vistas\css\logitos.css" />
+    <Content Include="vistas\css\logosrds.css" />
+    <Content Include="vistas\css\menuppp.css" />
+    <Content Include="vistas\css\normalice.css" />
+    <Content Include="vistas\css\parrafoestilos.css" />
+    <Content Include="vistas\css\skeleton.css" />
+    <Content Include="vistas\css\style.css" />
+    <Content Include="vistas\img\burguer.jpg" />
+    <Content Include="vistas\img\chefs\chefs-1.jpg" />
+    <Content Include="vistas\img\chefs\chefs-2.jpg" />
+    <Content Include="vistas\img\chefs\chefs-3.jpg" />
+    <Content Include="vistas\img\comida1.jpg" />
+    <Content Include="vistas\img\comida2.jpg" />
+    <Content Include="vistas\img\comida3.jpg" />
+    <Content Include="vistas\img\comida4.jpg" />
+    <Content Include="vistas\img\comida5.jpg" />
+    <Content Include="vistas\img\comida6.jpg" />
+    <Content Include="vistas\img\comida7.jpg" />
+    <Content Include="vistas\img\comida8.jpg" />
+    <Content Include="vistas\img\comida9.jpg" />
+    <Content Include="vistas\img\estrellas.png" />
+    <Content Include="vistas\img\Fondohambur.jpg" />
+    <Content Include="vistas\img\fondomeni.jpg" />
+    <Content Include="vistas\img\gallery\gallery-1.jpg" />
+    <Content Include="vistas\img\gallery\gallery-2.jpg" />
+    <Content Include="vistas\img\gallery\gallery-3.jpg" />
+    <Content Include="vistas\img\gallery\gallery-4.jpg" />
+    <Content Include="vistas\img\gallery\gallery-5.jpg" />
+    <Content Include="vistas\img\gallery\gallery-6.jpg" />
+    <Content Include="vistas\img\gallery\gallery-7.jpg" />
+    <Content Include="vistas\img\gallery\gallery-8.jpg" />
+    <Content Include="vistas\img\guesa.jpg" />
+    <Content Include="vistas\img\hamburguesa.ico" />
+    <Content Include="vistas\img\hamburguesalogo.gif" />
+    <Content Include="vistas\img\hero.jpg" />
+    <Content Include="vistas\img\icono1.png" />
+    <Content Include="vistas\img\icono2.png" />
+    <Content Include="vistas\img\icono3.png" />
+    <Content Include="vistas\img\logo.png" />
+    <Content Include="vistas\img\menu\bread-barrel.jpg" />
+    <Content Include="vistas\img\menu\caesar.jpg" />
+    <Content Include="vistas\img\menu\cake.jpg" />
+    <Content Include="vistas\img\menu\greek-salad.jpg" />
+    <Content Include="vistas\img\menu\lobster-bisque.jpg" />
+    <Content Include="vistas\img\menu\lobster-roll.jpg" />
+    <Content Include="vistas\img\menu\mozzarella.jpg" />
+    <Content Include="vistas\img\menu\spinach-salad.jpg" />
+    <Content Include="vistas\img\menu\tuscan-grilled.jpg" />
+    <Content Include="vistas\img\testimonials\testimonials-1.jpg" />
+    <Content Include="vistas\img\testimonials\testimonials-2.jpg" />
+    <Content Include="vistas\img\testimonials\testimonials-3.jpg" />
+    <Content Include="vistas\img\testimonials\testimonials-4.jpg" />
+    <Content Include="vistas\img\testimonials\testimonials-5.jpg" />
+    <Content Include="vistas\Inicio.aspx" />
+    <Content Include="vistas\js\main.js" />
+    <Content Include="vistas\Le festín - Camille %28from Ratatouille%29 _ Lyric - Sub. Español [Full version]_256k.mp3" />
+    <Content Include="vistas\Menu.aspx" />
+    <Content Include="vistas\ReportesEstadisticos.aspx" />
+    <Content Include="vistas\ReportesEstadisticosBDcuatro.aspx" />
+    <Content Include="vistas\ReportesEstadisticosCBD.aspx" />
+    <Content Include="vistas\ReportesEstadisticosCBD_tres.aspx" />
+    <Content Include="vistas\ReportesEstadisticosSBD.aspx" />
+    <Content Include="vistas\ReportesEstadisticosSBD_tres.aspx" />
+    <Content Include="vistas\ReportesEstadisticos_dos.aspx" />
+    <Content Include="vistas\vendor\animate.css\animate.compat.css" />
+    <Content Include="vistas\vendor\animate.css\animate.css" />
+    <Content Include="vistas\vendor\animate.css\animate.min.css" />
+    <Content Include="vistas\vendor\aos\aos.css" />
+    <Content Include="vistas\vendor\aos\aos.js" />
+    <Content Include="vistas\vendor\bootstrap-icons\bootstrap-icons.css" />
+    <Content Include="vistas\vendor\bootstrap-icons\index.html" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap-grid.css" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap-grid.min.css" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap-grid.rtl.css" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap-grid.rtl.min.css" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap-reboot.css" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap-reboot.min.css" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap-reboot.rtl.css" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap-utilities.css" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap-utilities.min.css" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap-utilities.rtl.css" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap.css" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap.min.css" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap.rtl.css" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap.rtl.min.css" />
+    <Content Include="vistas\vendor\bootstrap\js\bootstrap.bundle.js" />
+    <Content Include="vistas\vendor\bootstrap\js\bootstrap.bundle.min.js" />
+    <Content Include="vistas\vendor\bootstrap\js\bootstrap.esm.js" />
+    <Content Include="vistas\vendor\bootstrap\js\bootstrap.esm.min.js" />
+    <Content Include="vistas\vendor\bootstrap\js\bootstrap.js" />
+    <Content Include="vistas\vendor\bootstrap\js\bootstrap.min.js" />
+    <Content Include="vistas\vendor\boxicons\css\animations.css" />
+    <Content Include="vistas\vendor\boxicons\css\boxicons.css" />
+    <Content Include="vistas\vendor\boxicons\css\boxicons.min.css" />
+    <Content Include="vistas\vendor\boxicons\css\transformations.css" />
+    <Content Include="vistas\vendor\boxicons\fonts\boxicons.svg" />
+    <Content Include="vistas\vendor\glightbox\css\glightbox.css" />
+    <Content Include="vistas\vendor\glightbox\css\glightbox.min.css" />
+    <Content Include="vistas\vendor\glightbox\js\glightbox.js" />
+    <Content Include="vistas\vendor\glightbox\js\glightbox.min.js" />
+    <Content Include="vistas\vendor\isotope-layout\isotope.pkgd.js" />
+    <Content Include="vistas\vendor\isotope-layout\isotope.pkgd.min.js" />
+    <Content Include="vistas\vendor\php-email-form\validate.js" />
+    <Content Include="vistas\vendor\swiper\swiper-bundle.min.css" />
+    <Content Include="vistas\vendor\swiper\swiper-bundle.min.js" />
+    <Content Include="Web.config" />
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Views\Web.config" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Home\About.cshtml" />
+    <Content Include="Views\Home\Contact.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="vistas\vendor\bootstrap-icons\bootstrap-icons.json" />
+    <Content Include="vistas\vendor\bootstrap-icons\fonts\bootstrap-icons.woff" />
+    <Content Include="vistas\vendor\bootstrap-icons\fonts\bootstrap-icons.woff2" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap-grid.css.map" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap-grid.min.css.map" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap-grid.rtl.css.map" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap-grid.rtl.min.css.map" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap-reboot.css.map" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap-reboot.min.css.map" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap-reboot.rtl.css.map" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap-reboot.rtl.min.css.map" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap-utilities.css.map" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap-utilities.min.css.map" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap-utilities.rtl.css.map" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap-utilities.rtl.min.css.map" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap.css.map" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap.rtl.css.map" />
+    <Content Include="vistas\vendor\bootstrap\css\bootstrap.rtl.min.css.map" />
+    <Content Include="vistas\vendor\bootstrap\js\bootstrap.bundle.js.map" />
+    <Content Include="vistas\vendor\bootstrap\js\bootstrap.bundle.min.js.map" />
+    <Content Include="vistas\vendor\bootstrap\js\bootstrap.esm.js.map" />
+    <Content Include="vistas\vendor\bootstrap\js\bootstrap.esm.min.js.map" />
+    <Content Include="vistas\vendor\bootstrap\js\bootstrap.js.map" />
+    <Content Include="vistas\vendor\bootstrap\js\bootstrap.min.js.map" />
+    <Content Include="vistas\vendor\boxicons\fonts\boxicons.eot" />
+    <Content Include="vistas\vendor\boxicons\fonts\boxicons.ttf" />
+    <Content Include="vistas\vendor\boxicons\fonts\boxicons.woff" />
+    <Content Include="vistas\vendor\boxicons\fonts\boxicons.woff2" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Models\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="Content\bootstrap.min.css.map" />
+    <Content Include="Content\bootstrap.css.map" />
+    <Content Include="Content\bootstrap-theme.min.css.map" />
+    <Content Include="Content\bootstrap-theme.css.map" />
+    <None Include="packages.config" />
+    <Content Include="Scripts\jquery-3.4.1.slim.min.map" />
+    <Content Include="Scripts\jquery-3.4.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>2475</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>https://localhost:44327/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.2.0.1\build\net46\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it.
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

@@ -1,0 +1,276 @@
+﻿@import url(bbbb.css);
+@import url(barralateral.css);
+@import url(font-awesome.min.css);
+body {
+    margin:0px;
+}
+
+.letrita {
+    font-family: 'Pacifico', cursive;
+    font-size:xx-small;
+}
+.full-width {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.NavBarP,
+.NavBarP-Logo,
+.NavBarP-Nav,
+.NavBarP-Nav > ul,
+.NavBarP-Nav > ul > li,
+.NavBarP-Nav > ul > li > a {
+    height: 50px;
+    line-height: 50px;
+}
+
+.NavBarP {
+    background-color: #141414;
+    color: #fff;
+    position: relative;
+    font-family: 'RobotoCondensedLight';
+    text-transform: uppercase;
+    font-size: 18px;
+    text-align: center;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+}
+
+.NavBarP-Logo,
+.NavBarP-Nav {
+    position: absolute;
+    top: 0;
+    background-color: #141414;
+}
+
+.NavBarP-Logo {
+    left: 0;
+    width: 30%;
+    font-family: 'OswaldRegular';
+}
+
+.NavBarP-Nav {
+    right: 0;
+    width: 70%;
+}
+
+    .NavBarP-Nav > ul {
+        text-align: right;
+        padding-right: 10px;
+    }
+
+        .NavBarP-Nav > ul > li {
+            display: inline-block;
+            position: relative;
+        }
+
+            .NavBarP-Nav > ul > li > a {
+                color: #fff;
+                text-align: center;
+                display: block;
+                text-decoration: none;
+                padding: 0 7px;
+                transition: all .3s ease-in-out;
+            }
+
+                .NavBarP-Nav > ul > li > a:hover {
+                    color: #FAE76F;
+                }
+
+
+
+
+
+
+
+
+.banner {
+    position: relative;
+    width: 100%;
+    height: calc(100vh - 50px);
+    background-color: transparent;
+    background-size: cover;
+    background-position: center;
+    transition: all .1s ease-in-out;
+    background-image: url(../img/comida1.jpg);
+    animation: bannersillo 28s infinite linear;
+}
+
+
+.banner-content{
+    margin:0;
+    padding:0;
+    width:100%;
+    height:100%;
+    color:white;
+    background-color:rgba(0,22,40, .6);
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    
+    
+}
+
+.banner-content h1 {
+    margin: 0;
+    padding: 0;
+    padding-bottom:30px;
+    font-size:40px;
+    text-align:center;
+}
+
+
+.banner-content a {
+        
+    text-decoration:none;
+    color:white;
+    margin-top:100px;
+    padding: 9px 20px;
+    text-transform:uppercase;
+    transition:all .3s ease-in-out;
+    }
+
+    /*.banner-content a:hover {
+        text-decoration: none;
+        color: white;
+        padding: 9px 20px;
+        border: 1px initial #fff;
+        text-transform: uppercase;
+        transition: all .3s ease-in-out;
+        color: #333;
+    }*/
+
+ @keyframes bannersillo{
+    0% {
+        background-image: url(../img/comida1.jpg);
+    }
+
+    25% {
+        background-image: url(../img/comida1.jpg);
+    }
+    26% {
+        background-image: url(../img/comida2.jpg);
+    }
+
+    50% {
+        background-image: url(../img/comida2.jpg);
+    }
+
+    51% {
+        background-image: url(../img/comida3.jpg);
+    }
+
+    75% {
+        background-image: url(../img/comida3.jpg);
+    }
+    76% {
+        background-image: url(../img/comida4.jpg);
+    }
+
+    100% {
+        background-image: url(../img/comida4.jpg);
+    }
+ }
+
+
+.btnneon {
+position:relative;
+display: inline-block;
+padding:15px 30px;
+color:#fff;
+letter-spacing: 4px;
+font-size:24px;
+text-decoration:none;
+overflow:hidden;
+transition:0.2s;
+
+
+}
+
+    .btnneon:hover {
+        background: #c11d1d;
+        box-shadow: 0 0 10px #c11d1d, 0 0 40px #c11d1d, 0 0 80px #c11d1d;
+        transition-delay: 1s;
+        color:white;
+        text-decoration:none;
+        
+    }
+
+    .btnneon span {
+    position:absolute;
+    display:block;
+
+    }
+
+#span1{
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #c11d1d);
+
+}
+
+.btnneon:hover #span1 {
+
+    left:100%;
+    transition:1s;
+
+}
+
+
+
+
+#span3 {
+    bottom: 0;
+    right: -100%;
+    width: 100%;
+    height: 2px;
+    background: linear-gradient(270deg, transparent, #c11d1d);
+}
+
+.btnneon:hover #span3 {
+    right:100%;
+    transition: 1s;
+    transition-delay:0.5s;
+}
+
+
+
+
+#span2 {
+    top: -100%;
+    right: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, transparent, #c11d1d);
+}
+
+.btnneon:hover #span2 {
+    top:100%;
+    transition: 1s;
+    transition-delay:0.25s;
+}
+
+
+
+
+#span4 {
+    bottom:-100%;
+    left: 0;
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(360deg, transparent, #c11d1d);
+}
+
+.btnneon:hover #span4 {
+    bottom:100%;
+    transition: 1s;
+    transition-delay: 0.75s;
+}
+
